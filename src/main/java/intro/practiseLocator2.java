@@ -40,6 +40,7 @@ public class practiseLocator2 {
 
 		System.out.println(driver.findElement(By.tagName("p")).getText());
 		Assert.assertEquals(driver.findElement(By.tagName("p")).getText(), "You are successfully logged in.");
+		driver.findElement(By.xpath("//button[@class='logout-btn']")).click();
 		// driver.close();
 
 	}
