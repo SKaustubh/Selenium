@@ -13,6 +13,8 @@ public class dropdownLocator {
 
 	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 		WebElement staticDropdown = driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency"));
 		staticDropdown.click();
@@ -33,6 +35,22 @@ public class dropdownLocator {
 
 		driver.findElement(By.tagName("body")).click();
 
+		// click dropdown
+
+		driver.findElement(By.id("divpaxinfo")).click();
+		Thread.sleep(2100);
+
+		for (int i = 0; i < 4; i++) {
+
+			driver.findElement(By.id("hrefIncAdt")).click();
+
+			driver.findElement(By.id("hrefIncChd")).click();
+
+			driver.findElement(By.id("hrefIncInf")).click();
+			Thread.sleep(1000);
+		}
+
+		driver.findElement(By.id("btnclosepaxoption"));
 		Thread.sleep(1000);
 
 		driver.close();
