@@ -33,7 +33,7 @@ public class makeMYtrip_dynamicDropdown_Practise {
 			// driver.findElement(By.xpath("//label[@for='anotherDeparture " + i +
 			// "']")).click();
 			for (int j = 1; j < 31; j++) {
-
+				Thread.sleep(2000);
 				WebElement dat = driver.findElement(By.xpath("(//p[text()='" + (j) + "'])[1]"));
 
 				if (ExpectedConditions.elementToBeClickable(dat) != null)
@@ -41,7 +41,7 @@ public class makeMYtrip_dynamicDropdown_Practise {
 			}
 			Thread.sleep(2000);
 			for (int j = 1; j <= 30; j++) {
-
+				Thread.sleep(2000);
 				WebElement dat = driver.findElement(By.xpath("(//p[text()='" + (j) + "'])[1]"));
 
 				if (ExpectedConditions.elementToBeClickable(dat) != null)
